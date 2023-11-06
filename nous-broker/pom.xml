@@ -44,8 +44,14 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
+                <groupId>com.google.cloud.tools</groupId>
+                <artifactId>jib-maven-plugin</artifactId>
+                <version>3.3.0</version> <!-- Check for the latest version on the Jib GitHub releases page -->
+                <configuration>
+                    <to>
+                        <image>nous-broker:${version}</image>
+                    </to>
+                </configuration>
             </plugin>
         </plugins>
     </build>
