@@ -18,7 +18,6 @@ import java.nio.file.Paths;
 public class LuceneIndexer {
 
     public void createIndex() throws IOException {
-        Analyzer analyzer = new StandardAnalyzer();
         Path indexPath = Paths.get(System.getProperty("user.home") + "/indexDirectory");
 
         if (!Files.exists(indexPath)) {
@@ -30,6 +29,7 @@ public class LuceneIndexer {
             }
         }
         Directory directory = FSDirectory.open(indexPath);
+        Analyzer analyzer = new StandardAnalyzer();
         IndexWriterConfig config = new IndexWriterConfig(analyzer);
         try (IndexWriter indexWriter = new IndexWriter(directory, config)) {
             // Process data and add documents to the index

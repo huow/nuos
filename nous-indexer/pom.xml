@@ -43,6 +43,13 @@
             <version>2.20.141</version>
         </dependency>
 
+        <!-- XML Parser -->
+        <dependency>
+            <groupId>org.jdom</groupId>
+            <artifactId>jdom2</artifactId>
+            <version>2.0.6</version>
+        </dependency>
+
     </dependencies>
 
     <build>
