@@ -31,7 +31,7 @@ public class S3Uploader {
                 .region(Region.US_EAST_1)
                 .credentialsProvider(DefaultCredentialsProvider.create())
                 .build();
-        bucketName = "nous-dummy-index-bucket";
+        bucketName = "nous-dummy-note-index-bucket";
     }
 
     public void uploadIndex(String indexDirPath) {

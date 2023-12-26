@@ -17,11 +17,12 @@ public class NousIndexerApplication {
 
         // Initialize Lucene Indexer
         LuceneIndexer indexer = new LuceneIndexer();
-        indexer.createIndex();
+        indexer.createIndex(mindMapNodes);
 
         // Initialize S3 Uploader
         S3Uploader uploader = new S3Uploader();
         uploader.uploadIndex(System.getProperty("user.home") + "/indexDirectory");
+
     }
 
 }
